@@ -146,7 +146,9 @@ nav {
   color: var(--name-color) !important;
 }
 
-input[type="checkbox"] {
+/* First example for toggle button */
+
+/* input[type="checkbox"] {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -192,6 +194,53 @@ input:checked + label:after {
 
 label:active:after {
   width: 45px;
+} */
+
+/* Second example for toggle button: */
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: rgba(3, 155, 155);
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 20px;
+	width: 44px;
+  transform: scale(1.5);
+  margin-top: 17px;
+  margin-right: 170px;
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 16px;
+	width: 16px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+.fa-moon {
+	color: #fff022;
+}
+
+.fa-sun {
+	color: #ffc710;
 }
 
 .nav-list {
@@ -282,7 +331,7 @@ label:active:after {
   margin-bottom: 25px;
 }
 
-.codeglow{
+.codeglow {
   color: rgb(230, 127, 10);
   color: rgb(223, 88, 88);
 }
